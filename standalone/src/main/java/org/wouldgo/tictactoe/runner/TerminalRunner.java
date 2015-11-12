@@ -1,4 +1,4 @@
-package standalone;
+package org.wouldgo.tictactoe.runner;
 
 import static java.lang.System.out;
 
@@ -13,6 +13,7 @@ public final class TerminalRunner {
 
 	private static void dumpAndWait(Board aBoard) throws InterruptedException {
 
+		out.println("--------------------");
 		out.println(aBoard);
 		Thread.sleep(twoSecs);
 	}
@@ -36,13 +37,13 @@ public final class TerminalRunner {
 
 		if (aBoard.hasWon(GameRole.CROSS)) {
 
-			out.println("Cross wins");
+			out.println("Cross wins\r\n");
 		} else if (aBoard.hasWon(GameRole.KNOT)) {
 
-			out.println("Knot wins");
+			out.println("Knot wins\r\n");
 		} else {
 
-			out.print("Draw");
+			out.print("Draw\r\n");
 		}
 	}
 }

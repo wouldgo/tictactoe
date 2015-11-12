@@ -52,7 +52,7 @@
 		<junit.version>4.12</junit.version>
 		<json-path.version>1.2.0</json-path.version>
 
-		<main-class>org.wouldgo.processor.Main</main-class>
+		<main-class>org.wouldgo.tictactoe.runner.TerminalRunner</main-class>
 	</properties>
 
 	<dependencies>
@@ -303,14 +303,38 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 			</plugin>
 
-			<!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-shade-plugin</artifactId> 
-				<version>${maven-shade-plugin.version}</version> <executions> <execution> 
-				<goals> <goal>shade</goal> </goals> <configuration> <filters> <filter> <artifact>*:*</artifact> 
-				<excludes> <exclude>**/*.DSA</exclude> <exclude>**/*.RSA</exclude> <exclude>**/*.SF</exclude> 
-				</excludes> </filter> </filters> <transformers> <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" 
-				/> <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"> 
-				<mainClass>${main-class}</mainClass> </transformer> </transformers> </configuration> 
-				</execution> </executions> </plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>${maven-shade-plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<filters>
+								<filter>
+									<artifact>*:*</artifact>
+									<excludes>
+										<exclude>**/*.DSA</exclude>
+										<exclude>**/*.RSA</exclude>
+										<exclude>**/*.SF</exclude>
+									</excludes>
+								</filter>
+							</filters>
+							<transformers>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									<mainClass>${main-class}</mainClass>
+								</transformer>
+							</transformers>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>

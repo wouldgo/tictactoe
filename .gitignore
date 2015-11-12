@@ -5,3 +5,8 @@ min-max-player/target/
 player/target/
 board/target/
 standalone/target/
+board/dependency-reduced-pom.xml
+min-max-player/dependency-reduced-pom.xml
+player/dependency-reduced-pom.xml
+standalone/dependency-reduced-pom.xml
+target/
