@@ -1,0 +1,7 @@
+.project
+.settings/
+.classpath
+min-max-player/target/
+player/target/
+board/target/
+standalone/target/
