@@ -2,6 +2,8 @@ package org.wouldgo.tictactoe.player;
 
 import java.util.Collection;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.wouldgo.tictactoe.GameRole;
 import org.wouldgo.tictactoe.board.Board;
 import org.wouldgo.tictactoe.board.Cell;
@@ -9,16 +11,26 @@ import org.wouldgo.tictactoe.board.Cell;
 import com.google.common.collect.ImmutableList;
 
 public final class MinMaxPlayer extends TicTacToePlayer {
+	private static final transient Logger logger = LoggerFactory.getLogger(MinMaxPlayer.class);
 
 	private static final int DEPTH = 2;
 
 	public MinMaxPlayer(Board board, GameRole role) {
+
 		super(board, role);
+		if (logger.isDebugEnabled()) {
+
+			logger.debug("Creating a MinMaxPlayer");
+		}
 	}
 
 	@Override
 	public void move() {
 
+		if (logger.isDebugEnabled()) {
+
+			logger.debug("Moving...");
+		}
 		int[] result = minimax(DEPTH, myRole);
 		if (result[1] != -1 && result[2] != -1) {
 

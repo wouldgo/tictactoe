@@ -10,3 +10,5 @@ min-max-player/dependency-reduced-pom.xml
 player/dependency-reduced-pom.xml
 standalone/dependency-reduced-pom.xml
 target/
+middleware/target/
+web-api/target/

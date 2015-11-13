@@ -6,14 +6,15 @@
 		<artifactId>tic-tac-toe</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>player</artifactId>
-	<name>the tic tac toe player</name>
+	<artifactId>middleware</artifactId>
+	<name>service layer</name>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.wouldgo</groupId>
-			<artifactId>board</artifactId>
+			<artifactId>min-max-player</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
+
 </project>

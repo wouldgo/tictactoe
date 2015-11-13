@@ -1,8 +1,12 @@
 package org.wouldgo.tictactoe.board;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.wouldgo.tictactoe.GameRole;
 
 public final class Cell {
+
+	private static final transient Logger logger = LoggerFactory.getLogger(Cell.class);
 	private final int x, y;
 	private GameRole content;
 
@@ -26,6 +30,11 @@ public final class Cell {
 	}
 
 	void setContent(GameRole newContent) {
+
+		if (logger.isDebugEnabled()) {
+
+			logger.debug("Setting content {1} for {2}, {3}", newContent, x, y);
+		}
 
 		if (this.content != GameRole.EMPTY) {
 
