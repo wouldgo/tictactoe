@@ -43,7 +43,7 @@
 				<version>${jetty.version}</version>
 				<configuration>
 					<httpConnector>
-						<host>localhost</host>
+						<host>0.0.0.0</host>
 						<port>8081</port>
 					</httpConnector>
 					<webApp>

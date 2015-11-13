@@ -12,3 +12,4 @@ standalone/dependency-reduced-pom.xml
 target/
 middleware/target/
 web-api/target/
+web-api/dependency-reduced-pom.xml
